@@ -16,5 +16,9 @@ switch (score)
     case "1":
         Console.WriteLine("You achieved a First Class honours degree");
         break;
+
+    default:
+        Console.WriteLine("No known achievement");
+        break;
 }
 
