@@ -1,20 +1,20 @@
-int score = 3;
+String score = "1";
 
 
 switch (score)
 {
-    case 1:
-        Console.WriteLine("Could do better");
+    case "2:2":
+        Console.WriteLine("You achieved a Second Class Lower Divison honours degree");
         break;
 
 
-    case 2:
-        Console.WriteLine("Getting there");
+    case "2:1":
+        Console.WriteLine("You achieved a Second Class Upper Divison honours degree");
         break;
 
 
-    case 3:
-        Console.WriteLine("Well done!");
+    case "1":
+        Console.WriteLine("You achieved a First Class honours degree");
         break;
 }
 
