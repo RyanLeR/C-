@@ -1,25 +1,67 @@
-String score = "1";
+string sku = "02-BL-M";
+
+string[] product = sku.Split('-');
+
+string type = "";
+string color = "";
+string size = "";
 
 
-switch (score)
+switch (product[0])
 {
-    case "2:2":
-        Console.WriteLine("You achieved a Second Class Lower Divison honours degree");
+
+    case "01":
+        type = "Sweat shirt";
         break;
 
-
-    case "2:1":
-        Console.WriteLine("You achieved a Second Class Upper Divison honours degree");
+    case "02":
+        type = "T-Shirt";
         break;
 
-
-    case "1":
-        Console.WriteLine("You achieved a First Class honours degree");
+    case "03":
+        type = "Sweat pants";
         break;
 
     default:
-        Console.WriteLine("No known achievement");
+        type = "Other";
         break;
-}
+};
 
-    
+
+switch (product[1]) {
+
+    case "BL":
+        color = "Black";
+        break;
+
+    case "MN":
+        color = "Maroon";
+        break;
+        
+        case "White":
+        color = "Maroon";
+        break;
+};
+
+
+switch (product[2]) {
+
+    case "S":
+        size = "Small";
+        break;
+
+    case "M":
+        size = "Medium";
+        break;
+
+    case "L":
+        size = "Large";
+        break;
+        
+        default:
+        size = "One Size Fits All";
+        break;
+};
+
+
+Console.WriteLine($"Product: {size} {color} {type}  ");
