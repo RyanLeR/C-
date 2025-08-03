@@ -1,67 +1,47 @@
-string sku = "02-BL-M";
+using System;
+var roll = new Random();
+int score;
 
-string[] product = sku.Split('-');
+int dice1 = roll.Next(1, 7);
 
-string type = "";
-string color = "";
-string size = "";
+int dice2 = roll.Next(1, 7);
+
+int dice3 = roll.Next(1, 7);
+
+score = dice1 + dice2 + dice3;
 
 
-switch (product[0])
+if ((dice1 == dice2) && (dice1 == dice3))
 {
-
-    case "01":
-        type = "Sweat shirt";
-        break;
-
-    case "02":
-        type = "T-Shirt";
-        break;
-
-    case "03":
-        type = "Sweat pants";
-        break;
-
-    default:
-        type = "Other";
-        break;
-};
+    score += 6;
+}
+else if ((dice1 == dice2) || (dice1 == dice3) || (dice2 == dice3))
+{
+    score += 2;
+}
+else
+{
+    score = score;
+}
 
 
-switch (product[1]) {
+Console.WriteLine(dice1);
+Console.WriteLine(dice2);
+Console.WriteLine(dice3);
+Console.WriteLine($"score {score}");
 
-    case "BL":
-        color = "Black";
-        break;
-
-    case "MN":
-        color = "Maroon";
-        break;
-        
-        case "White":
-        color = "Maroon";
-        break;
-};
-
-
-switch (product[2]) {
-
-    case "S":
-        size = "Small";
-        break;
-
-    case "M":
-        size = "Medium";
-        break;
-
-    case "L":
-        size = "Large";
-        break;
-        
-        default:
-        size = "One Size Fits All";
-        break;
-};
+if (score > 14)
+{
+    Console.WriteLine("You won the game!");
+}
+else
+{
+    Console.WriteLine("Sorry, you lose.");
+}
 
 
-Console.WriteLine($"Product: {size} {color} {type}  ");
+
+
+
+
+
